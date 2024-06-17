@@ -9,10 +9,10 @@ function RemovedEmployees(){
 	let [err,setErr] = useState("");
 	
 	let deletingoff = (obj)=>{
-		axios.delete("https://employees-backend-606c861f4061.herokuapp.com/deleteperminent", { data: obj });
+		axios.delete("https://employees-backend-17f82ce5e426.herokuapp.com/deleteperminent", { data: obj });
 	}
 	useEffect(()=>{
-		axios.get("https://employees-backend-606c861f4061.herokuapp.com/gettingdeleted")
+		axios.get("https://employees-backend-17f82ce5e426.herokuapp.com/gettingdeleted")
 		.then((response) => {
 			setEmployees(response.data);
 		})
