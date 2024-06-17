@@ -13,7 +13,7 @@ function AddEmployees() {
     const empobj = async (details) => {
         setEmployee(details);
         try {
-            const response = await axios.post('https://employees-backend-606c861f4061.herokuapp.com/put', details);
+            const response = await axios.post('https://employees-backend-17f82ce5e426.herokuapp.com/put', details);
             console.log(response);
             navigate("/employees");
         } catch (error) {
