@@ -46,7 +46,7 @@ function Employees() {
 	  modifyuser.id = usertoedit.id;
 	  
 	  console.log(modifyuser);
-	  axios.post("https://employees-backend-606c861f4061.herokuapp.com/updating",modifyuser)
+	  axios.post("https://employees-backend-17f82ce5e426.herokuapp.com/updating",modifyuser)
 	.then((response) => {
 		  console.log(response);
 	  })
@@ -66,14 +66,14 @@ function Employees() {
   
   {/**deleting the user */}
   let deleteemployee = (deletingobject) =>{
-	  axios.post("https://employees-backend-606c861f4061.herokuapp.com/inserting",deletingobject);
+	  axios.post("https://employees-backend-17f82ce5e426.herokuapp.com/inserting",deletingobject);
 	  //axios.delete("http://localhost:8080/delete",deletingobject);
-	  axios.delete("https://employees-backend-606c861f4061.herokuapp.com/delete", { data: deletingobject });
+	  axios.delete("https://employees-backend-17f82ce5e426.herokuapp.com/delete", { data: deletingobject });
 	  console.log("the object was deleted");
   }
 
   useEffect(() => {
-    axios.get("https://employees-backend-606c861f4061.herokuapp.com/get")
+    axios.get("https://employees-backend-17f82ce5e426.herokuapp.com/get")
       .then((response) => {
         console.log(response.data);
         setEmployees(response.data);
